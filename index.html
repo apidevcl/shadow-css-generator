@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Shadow generator CSS</h1>
+    </header>
+    <main>
+        <section class="slides">
+            <fieldset>
+                <Legend>Figura</Legend>
+                <span class="fig-01"></span>
+                <span class="fig-02"></span>
+            </fieldset>
+            <fieldset>
+                <Legend>Desplazamiento horizontal</Legend>
+                <input type="range" name="rangeShadowX" min="-50" max="50">
+                <span id="rangeShadowX">00</span>
+            </fieldset>
+            <fieldset>
+                <Legend>Desplazamiento vertical</Legend>
+                <input type="range" name="rangeShadowY" min="-50" max="50">
+                <span id="rangeShadowY">00</span>
+            </fieldset>
+            <fieldset>
+                <Legend>Difusión del radio</Legend>
+                <input type="range" name="radioDifShadow" min="0" max="100">
+                <span id="radioDifShadow">00</span>
+            </fieldset>
+            <fieldset>
+                <Legend>Radio de expansión</Legend>
+                <input type="range" name="radioExpShadow" min="0" max="100">
+                <span id="radioExpShadow">00</span>
+            </fieldset>
+            <fieldset>
+                <Legend>Color de la sombra</Legend>
+                <input type="color" name="pickerColorShadow" value="#ffffff">
+                <span id="pickerColorShadow">#FFFFFF</span>
+            </fieldset>
+            <fieldset>
+                <Legend>Color de fondo</Legend>
+                <input type="color" name="pickerColorBg" value="#ffffff">
+                <span id="pickerColorBg">#FFFFFF</span>
+            </fieldset>
+            <fieldset>
+                <Legend>Opacidad</Legend>
+                <input type="range" name="opacity" min="0" max="1" step="0.01" value="0.50">
+                <span id="opacity">0.50</span>
+            </fieldset>
+        </section>
+        <section class="preview">
+            <fieldset>
+                <legend>Resultado</legend>
+                <div class="shadow-box">
+                    <button class="btn-in-out-set">inset - outset</button>
+                </div>
+                <div id="previewTextBoxShadow" class="previewTextBoxShadow"></div>
+                <span class="txtCopied"></span>
+            </fieldset>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

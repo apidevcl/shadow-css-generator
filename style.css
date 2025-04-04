@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 80%;
+    margin-top: 25px;
+    height: 65vh;
+    
+    .slides{
+        padding-right: 15px;
+        
+        fieldset:first-child {
+            display: flex;
+            justify-content: center;
+        }
+        fieldset{
+            height: auto;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-radius: 5px;
+
+            legend{
+                padding: 0 10px;
+            }
+        }
+        .fig-01, .fig-02{
+            width: 25px;
+            height: 25px;
+            border: 2px solid violet;
+            margin-right: 5px;
+            background: violet;
+            cursor: pointer;
+        }
+        .fig-01{
+            border-radius: 50%;
+        }
+    }
+    .preview{
+        fieldset{
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 5px;
+            padding-left: 15px;
+            height: 79vh;
+
+            legend{
+                padding: 0 10px;
+            }
+            .shadow-box{
+                width: 250px;
+                height: 250px;
+                border: 1px solid #888;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .btn-in-out-set{
+                    border: none;
+                    padding: 10px;
+                    border-radius: 25px;
+                    background-color: burlywood;
+                    cursor: pointer;
+                }
+            }
+            .previewTextBoxShadow{
+                padding-top: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .img-copy{
+                width: 25px;
+                height: 25px;
+            }
+            .txtCopied{
+                width: 15px;
+                color: #3fcf1b;
+                font-size: 12px;
+                opacity: 0;
+                text-align: center;
+            }
+        }
+    }
+}
