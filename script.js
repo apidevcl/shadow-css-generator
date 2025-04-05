@@ -10,7 +10,7 @@ let inOutSet = '';
 let boxShadow = 'box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75)';
 
 function hexToRGB(hex, opac) {
-    // Eliminar el símbolo # si existe
+    // Eliminar el símbolo # (si existe)
     hex = hex.replace('#', '');
     
     // Verificar si es un formato abreviado (ejemplo: #FFF)
