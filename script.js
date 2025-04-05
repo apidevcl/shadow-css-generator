@@ -73,13 +73,13 @@ switchBtn.addEventListener('click', (e) => {
     if(switchBtn.style.justifyContent === 'left'){
         switchBtn.style.justifyContent = 'right';
         document.querySelector('.text-in-out-set').textContent = 'inset';
-
+        inOutSet = 'inset ';
         document.querySelector('.shadow-box').style.boxShadow = `inset ${boxShadowUp}`;
         document.querySelector('.previewTextBoxShadow').textContent = `inset ${previewUp}`;
     }else{
         switchBtn.style.justifyContent = 'left';
         document.querySelector('.text-in-out-set').textContent = 'outset';
-
+        inOutSet = '';
         document.querySelector('.shadow-box').style.boxShadow = boxShadowUp.replace('inset', '');
         document.getElementById('previewTextBoxShadow').textContent = previewUp.replace('inset', '');
     }
@@ -89,10 +89,10 @@ const fig01 = document.querySelector('.fig-01');
 const fig02 = document.querySelector('.fig-02');
 
 fig01.addEventListener('click', (e) => {
-    shadowBox.style.borderRadius = '50%';
+    document.querySelector('.shadow-box').style.borderRadius = '50%';
 });
 fig02.addEventListener('click', (e) => {
-    shadowBox.style.borderRadius = '0%';
+    document.querySelector('.shadow-box').style.borderRadius = '0%';
 });
 
 const img = document.querySelector('.img-copy');
@@ -106,6 +106,7 @@ img.addEventListener('click', (e) => {
         setTimeout(() => {
             document.querySelector('.txtCopied').style.opacity = '0';
             document.querySelector('.txtCopied').style.transition = 'opacity 1s ease-in-out';
+            document.querySelector('.txtCopied').textContent = '';
         }, 1000);
     }).catch(err => {
         document.querySelector('.txtCopied').style.color = 'red';
