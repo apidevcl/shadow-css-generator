@@ -19,27 +19,27 @@
             </fieldset>
             <fieldset>
                 <Legend>Desplazamiento horizontal</Legend>
-                <input type="range" name="rangeShadowX" min="-50" max="50">
-                <span id="rangeShadowX">00</span>
+                <input type="range" name="rangeShadowX" min="-50" max="50" value="10">
+                <span id="rangeShadowX">10</span>
             </fieldset>
             <fieldset>
                 <Legend>Desplazamiento vertical</Legend>
-                <input type="range" name="rangeShadowY" min="-50" max="50">
-                <span id="rangeShadowY">00</span>
+                <input type="range" name="rangeShadowY" min="-50" max="50" value="10">
+                <span id="rangeShadowY">10</span>
             </fieldset>
             <fieldset>
                 <Legend>Difusión del radio</Legend>
-                <input type="range" name="radioDifShadow" min="0" max="100">
-                <span id="radioDifShadow">00</span>
+                <input type="range" name="radioDifShadow" min="0" max="100" value="5">
+                <span id="radioDifShadow">5</span>
             </fieldset>
             <fieldset>
                 <Legend>Radio de expansión</Legend>
-                <input type="range" name="radioExpShadow" min="0" max="100">
-                <span id="radioExpShadow">00</span>
+                <input type="range" name="radioExpShadow" min="0" max="100" value="0">
+                <span id="radioExpShadow">0</span>
             </fieldset>
             <fieldset>
                 <Legend>Color de la sombra</Legend>
-                <input type="color" name="pickerColorShadow" value="#ffffff">
+                <input type="color" name="pickerColorShadow" value="#000000">
                 <span id="pickerColorShadow">#FFFFFF</span>
             </fieldset>
             <fieldset>
@@ -49,17 +49,26 @@
             </fieldset>
             <fieldset>
                 <Legend>Opacidad</Legend>
-                <input type="range" name="opacity" min="0" max="1" step="0.01" value="0.50">
-                <span id="opacity">0.50</span>
+                <input type="range" name="opacity" min="0" max="1" step="0.01" value="0.75">
+                <span id="opacity">0.75</span>
             </fieldset>
         </section>
         <section class="preview">
             <fieldset>
                 <legend>Resultado</legend>
-                <div class="shadow-box">
-                    <button class="btn-in-out-set">inset - outset</button>
+                <div class="shadow-box" style="box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75)">
+                    <div class="bg-btn-in-out-set">
+                        <span class="switch-set"></span>
+                    </div>
+                    <span class="text-in-out-set">outset</span>
                 </div>
-                <div id="previewTextBoxShadow" class="previewTextBoxShadow"></div>
+                <div class="container-preview">
+                    <span>box-shadow: </span>
+                    <div id="previewTextBoxShadow" class="previewTextBoxShadow">
+                        10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+                    </div>
+                    <img src="./copy.png" class="img-copy" width="25" height="25">
+                </div>
                 <span class="txtCopied"></span>
             </fieldset>
         </section>
